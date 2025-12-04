@@ -1,0 +1,66 @@
+MATLAB Deployment Documentation Prompt
+
+Goal:
+Create a complete documentation with details and configuration package for installing the latest release of MatLab on a RHEL Redhat 9.x environment with internal database, LDAP/LDAPS SSO, and mutual TLS, aligned with UK Government Secure by Design (SByD), NCSC guidelines, DISA Stig guidlines, FIPS 140-3 Guidlines, and CIS Benchmark Level 2.
+
+Requirements:
+1. Environment Details:
+   - Air-gapped Redhat Enterprise Server 9.X vitual machine
+   - MATLAB installed as standalone server
+   - Authentication: LDAP integration with Active Directory (username/password over LDAPS)
+   - Certificates: Issued by AD Certificate Services, mutual TLS required
+   - VM domain-joined before installation
+   - Default firewall configuration
+
+2. Compliance:
+   - UK Gov Secure by Design
+   - NCSC Secure Design Principles
+   - CIS Benchmark Level 2 for Linux
+   - Disa Stig for RHEL 9
+   - Fips 140-3
+
+3. Deliverables:
+   - architecture.md (Mermaid diagrams for architecture, architecture details,network, certificate trust chain)
+   - database.md (Mermaid diagrams for database architecture, architecture details,network, tables and relationships)
+   - security.md (Threat model details, CIS L2 hardening steps, TLS config, RBAC mapping, compliance table)
+   - installation.md (Pre-requisite details, database setup steps, MATLAB installation steps, HTTPS+mTLS implementation, LDAP config steps)
+   - YAML configuration files: matlab-config.yaml, matlab-security.yaml
+   - README.md (TOC, usage instructions, embedded diagrams, YAML examples)
+   - Comprehensive PDF guide (Executive Summary, Compliance Checklist, all docs, diagrams, YAML examples)
+   - PowerPoint (.pptx) for stakeholders
+
+4. Formatting:
+   - All documents in Markdown (.md)
+   - Diagrams in Mermaid syntax
+   - Config files in YAML
+   - Bundle everything into a ZIP
+   - Include PDF and PPTX versions for distribution
+
+Additional Features:
+- Executive Summary and Compliance Checklist in PDF
+- README with clickable Table of Contents
+- Embedded diagrams and YAML examples in README
+- PowerPoint for stakeholder presentation
+
+Output Structure:
+- architecture.md
+- database.md
+- security.md
+- installation.md
+- matlab-config.yaml
+- matlab-security.yaml
+- README.md
+- MATLAB_Deployment_Guide.pdf
+- MATLAB_Deployment_Overview.pptx
+- matlab_installation_package.zip
+
+Action Steps When Using This Prompt:
+1. Generate Markdown documents fully with diagrams.
+2. Fill in details based on environment and compliance requirements.
+3. Create YAML templates with example values.
+4. Bundle all files into ZIP.
+5. Generate README with TOC, diagrams, YAML examples.
+6. Create consolidated PDF with summary and compliance checklist.
+7. Create PowerPoint presentation for stakeholders.
+8. Deliver ZIP containing all assets.
+9. Include full server hardening steps and use realistic YAML example values and add detailed Mermaid diagrams
