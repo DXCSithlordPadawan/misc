@@ -1,10 +1,10 @@
 IBM Rational DOORS 9.6.1 Deployment Documentation Prompt
 
 Goal:
-Create a complete documentation with details and configuration package for installing IBM Rational DOORS 9.6.1 on a VMware-hosted Windows Server 2022 environment with Oracle database, LDAP/LDAPS SSO, and mutual TLS, aligned with UK Government Secure by Design (SByD), NCSC guidelines, and CIS Benchmark Level 2.
+As an enterprise architect I need to create a complete documentation with details and configuration package for installing IBM Rational DOORS 9.6.1 on an air-gapped VMware-hosted Windows Server 2022 environment with Oracle database, LDAP/LDAPS SSO, and mutual TLS, aligned with UK Government Secure by Design (SByD), NCSC guidelines, and CIS Benchmark Level 2.  The DNS, AD and internal certificate server already exist the details of which will be contained in the install-parameters.yaml file which initially will have generated examples for later amendment.
 
 Requirements:
-1. Full Environment Details:
+1. Full Environment Details for an air-gapped system:
    - VMware VM running Windows Server 2022
    - DOORS installed as standalone server
    - Database: Oracle on separate host
@@ -18,13 +18,16 @@ Requirements:
    - UK Gov Secure by Design
    - NCSC Secure Design Principles
    - CIS Benchmark Level 2 for Windows Server 2022
+   - FIPS 140-3 compliance
 
 3. Deliverables:
    - architecture.md (Mermaid diagrams for architecture artifacts, full architecture details, Firewall and network details, certificate trust chain)
    - database.md (Mermaid diagrams for oracle architecture artifacts, full architecture details, Firewall and network details, tables and columns and triggers and stored procedures and relationships)
    - security.md (Threat model details, CIS L2 hardening steps, TLS config, RBAC mapping, compliance table)
+   - maintenance.md (Support tasks and patching)
+   - network.md (Firewall and network configuration)
    - installation.md (Pre-requisite details, Database setup steps, Application installation steps, HTTPS+mTLS implementation, LDAP config steps)
-   - YAML configuration files: doors-config.yaml, doors-security.yaml
+   - YAML configuration files: doors-config.yaml, doors-security.yaml, install-parameters.yaml
    - README.md (TOC, usage instructions, embedded diagrams, YAML examples)
    - Comprehensive PDF guide (Executive Summary, Compliance Checklist, all docs, diagrams, YAML examples)
    - PowerPoint (.pptx) for stakeholders
@@ -46,9 +49,12 @@ Output Structure:
 - architecture.md
 - database.md
 - security.md
+- network.md
+- maintenance.md
 - installation.md
 - doors-config.yaml
 - doors-security.yaml
+- install-parameters.yaml
 - README.md
 - DOORS_Deployment_Guide.pdf
 - DOORS_Deployment_Overview.pptx
