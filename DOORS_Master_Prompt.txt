@@ -1,0 +1,66 @@
+IBM Rational DOORS 9.6.1 Deployment Documentation Prompt
+
+Goal:
+Create a complete documentation with details and configuration package for installing IBM Rational DOORS 9.6.1 on a VMware-hosted Windows Server 2022 environment with Oracle database, LDAP/LDAPS SSO, and mutual TLS, aligned with UK Government Secure by Design (SByD), NCSC guidelines, and CIS Benchmark Level 2.
+
+Requirements:
+1. Full Environment Details:
+   - VMware VM running Windows Server 2022
+   - DOORS installed as standalone server
+   - Database: Oracle on separate host
+   - Authentication: LDAP integration with Active Directory (username/password over LDAPS)
+   - Web Access: DOORS Web Client (DWA)
+   - Certificates: Issued by AD Certificate Services, mutual TLS required
+   - Default firewall and network configuration
+   - VM domain-joined before installation
+
+2. Compliance:
+   - UK Gov Secure by Design
+   - NCSC Secure Design Principles
+   - CIS Benchmark Level 2 for Windows Server 2022
+
+3. Deliverables:
+   - architecture.md (Mermaid diagrams for architecture artifacts, full architecture details, Firewall and network details, certificate trust chain)
+   - database.md (Mermaid diagrams for oracle architecture artifacts, full architecture details, Firewall and network details, tables and columns and triggers and stored procedures and relationships)
+   - security.md (Threat model details, CIS L2 hardening steps, TLS config, RBAC mapping, compliance table)
+   - installation.md (Pre-requisite details, Database setup steps, Application installation steps, HTTPS+mTLS implementation, LDAP config steps)
+   - YAML configuration files: doors-config.yaml, doors-security.yaml
+   - README.md (TOC, usage instructions, embedded diagrams, YAML examples)
+   - Comprehensive PDF guide (Executive Summary, Compliance Checklist, all docs, diagrams, YAML examples)
+   - PowerPoint (.pptx) for stakeholders
+
+4. Formatting:
+   - All documents in Markdown (.md)
+   - Diagrams in Mermaid syntax
+   - Config files in YAML
+   - Bundle everything into a ZIP
+   - Include PDF and PPTX versions for distribution
+
+Additional Features:
+- Executive Summary and Compliance Checklist in PDF
+- README with clickable Table of Contents
+- Embedded diagrams and YAML examples in README
+- PowerPoint for stakeholder presentation
+
+Output Structure:
+- architecture.md
+- database.md
+- security.md
+- installation.md
+- doors-config.yaml
+- doors-security.yaml
+- README.md
+- DOORS_Deployment_Guide.pdf
+- DOORS_Deployment_Overview.pptx
+- doors_installation_package.zip
+
+Action Steps When Using This Prompt:
+1. Generate Markdown documents fully with diagrams.
+2. Fill in details based on environment and compliance requirements.
+3. Create YAML templates with example values.
+4. Bundle all files into ZIP.
+5. Generate README with TOC, diagrams, YAML examples.
+6. Create consolidated PDF with summary and compliance checklist.
+7. Create PowerPoint presentation for stakeholders.
+8. Deliver ZIP containing all assets.
+9. Include full CIS hardening steps and realistic YAML example values and detailed Mermaid diagrams
